@@ -39,5 +39,26 @@ public class Buku05 {
     void gantiHarga(int hrg){
         harga = hrg;
     }
+
+    int hitungHargaTotal(int jml ){
+
+        return harga * jml;
+    }
+
+    int hitungDiskon(int jml ){
+        int diskon = 0;
+        int hargaTotal = hitungHargaTotal(jml);
+        if (hargaTotal >= 150000) {
+            diskon = (int)(0.12*hargaTotal); // ada narrowing casting untuk diskon dari double menuju integer
+        }else if (hargaTotal < 150000 && hargaTotal>=75000)
+            diskon = (int)(0.05*hargaTotal); // ada narrowing casting untuk diskon dari double menuju integer
+        else 
+            diskon = 0;
+        return diskon;
+    }
+
+    int hitungHargaBayar(int jml){
+        return hitungHargaTotal(jml) - hitungDiskon(jml); 
+    }
 }
 

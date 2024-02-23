@@ -11,22 +11,27 @@ public class BukuMain05 {
         bk1.stok = 13;
         bk1.harga = 71000; 
 
-        System.out.println("==========================");
+        System.out.println("==============================");
         bk1.tampilInformasi();
-        System.out.println("==========================");
+        System.out.println("==============================");
         bk1.terjual(5);
         bk1.gantiHarga(60000);
         bk1.tampilInformasi();
+        System.out.println("Harga yang terjual = " + bk1.hitungHargaTotal(5));
+        System.out.println("Dapat Harga Diskon = " + bk1.hitungDiskon(5));
+        System.out.println("Harga Jual Akhir = " + bk1.hitungHargaBayar(5));
 
-        System.out.println("==========================");
+        System.out.println("===============================");
         Buku05 bk2 = new Buku05("Self Reward", "Maheera Ayesha", 160, 29,59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
 
-        System.out.println("==========================");
+        System.out.println("===============================");
         Buku05 bukuSeno = new Buku05("Self Reward", "Baskoro Seno Aji", 300, 29,600000);
         bukuSeno.terjual(5);
         bukuSeno.tampilInformasi();
+
+      
 
     }
 }
