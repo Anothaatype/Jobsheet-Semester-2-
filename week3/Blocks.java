@@ -2,7 +2,7 @@ package week3;
 public class Blocks {
     public int width,length, height;
 
-    // attribute of blocks using parametric constructor
+    // class attribute of blocks using parametric constructor
     public Blocks (int p, int l, int t ){
         length = p;
         width = l;
