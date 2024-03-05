@@ -2,6 +2,8 @@ package week3;
 
 public class MainStudent {
     public static void main(String[] args) {
+
+        // Instantiation Object s1,s2,s3,s4,s5
         Student s1 = new Student("m01", "student 1", 3.54);
         Student s2 = new Student("m02", "student 2", 3.4);
         Student s3 = new Student("m03", "student 3", 3.88);
@@ -9,11 +11,15 @@ public class MainStudent {
         Student s5 = new Student("m05", "student 5", 2.98);
         Student sData[] = {s1,s2,s3,s4,s5};
 
+        // Print Output using Print Data Method 
         for(Student std:sData){
+            std.printData();
+
+            //Print data without method or manual
             /*System.out.println("Nim = "+std.nim);
             System.out.println("Nama = "+std.name);
             System.out.println("GPA = "+std.gpa);*/
-            std.printData();
+          
         }
         
         //find max GPA
