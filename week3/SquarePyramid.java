@@ -1,9 +1,19 @@
-public class SquaraPyramid {
+package week3;
+public class SquarePyramid {
+
+    //Attribute of Square Pyramid 
     int s, h;
-    SquarePyramid(int sisi, int height){
+
+    // Default Constructor of Square Pyramid 
+    public SquarePyramid(){}
+
+    // Parametric Constructor of Square Pyramid
+    public SquarePyramid(int sisi, int height){
         s = sisi;
         h = height;
     }
+
+    // Method of Square Pyramid
     double calcVol(){
         double vol = 0;
         vol = (1.0/3.0)*(s*s)*h;

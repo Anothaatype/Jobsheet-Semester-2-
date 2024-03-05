@@ -1,12 +1,16 @@
+package week3;
 public class Sphere {
 
     // Attribute of Sphere 
     int r;
 
-    //Constructor of Sphere
+    //Parametric Constructor of Sphere
     public Sphere(int j){
         r = j;
     }
+
+    //Default Constructor of Sphere 
+    public Sphere(){}
 
     // Method of Sphere 
     double calcVol(){
