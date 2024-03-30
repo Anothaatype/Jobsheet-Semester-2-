@@ -4,6 +4,45 @@ import java.util.Scanner;
 
 public class MainSum {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================================");
+        System.out.println("Program for Calculating Total Profits");
+        System.out.print("Input the number of Companies : ");
+        int numCompanies=sc.nextInt();
+        
+        // Creating an Array of Object 
+        Sum[] companySums = new Sum[numCompanies];
+
+        // Inputting or Entering the value for the quantity of the company, months and, profit for each months 
+        System.out.println("================================================");
+        for (int i = 0; i < numCompanies; i++) {
+            System.out.println("++                Company "+(i+1)+"                   ++");
+            System.out.println("================================================");
+            System.out.print("The Quantities Of Month "+(i+1)+" : ");
+            int toElement = sc.nextInt();
+            companySums[i] = new Sum(toElement);
+            System.out.println("The Company "+(i+1)+" Profit is : ");
+            for(int j=0; j < toElement; j++){
+            System.out.print("Monthly Profit - "+(j+1)+" = ");
+            companySums[i].profit[j] = sc.nextDouble();
+            System.out.println("================================================");
+            }
+        }
+
+        // Calculate The Profit For Each Company
+        System.out.println("================================================");
+        System.out.println("++         Total Profit Every Company         ++");
+        System.out.println("================================================");
+        for(int i = 0; i < numCompanies; i++){
+            System.out.println("Company "+(i+1)+" :");
+            System.out.println("Total profit using Brute Force : "+ companySums[i].totalBF(companySums[i].profit));
+            System.out.println("Total using Divide Conquer : "+ companySums[i].totalDC(companySums[i].profit, 0, companySums[i].elemen-1));
+            System.out.println("================================================");
+        }
+        
+
+        /* Depends on the jobsheet 
         Scanner sc = new Scanner(System.in);
         System.out.println("==============================");
         System.out.println("Program for Calculating Total Profits");
@@ -33,7 +72,7 @@ public class MainSum {
         System.out.println("==============================");
         System.out.println("Algoritma Divide Conquer");
         System.out.println("Total Profits of the company for " + sm.elemen + " month is = " + sm.totalDC(sm.profit, 0,sm.elemen-1));
-
+        */
 
     }
 }

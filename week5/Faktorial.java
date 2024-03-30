@@ -6,9 +6,16 @@ public class Faktorial {
     // Faktorial Method Using Looping
     public int faktorialBF (int n){
         int faktorial = 1;
-        for(int i =1; i<= n; i++){
+        int i = 1;
+        while (i <= n) {
             faktorial = faktorial * i;
+            i++;
         }
+
+        /*for(int i =1; i<= n; i++){
+            faktorial = faktorial * i;
+        }*/
+
         return faktorial;
     }
 

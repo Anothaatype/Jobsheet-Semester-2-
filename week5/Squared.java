@@ -5,7 +5,11 @@ public class Squared {
     // Attribute of Squared 
     public int num, squared;
 
-    // Method of Squared 
+    // Constructor Squared
+    public Squared( int n, int s){
+        num = n;
+        squared = s; 
+    }
 
     // Method squaredBF
     public int squaredBF( int a, int n) {
