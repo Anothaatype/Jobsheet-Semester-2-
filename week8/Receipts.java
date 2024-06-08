@@ -1,4 +1,4 @@
-package week9;
+package week8;
 
 public class Receipts {
         int transactionID, quantity;
